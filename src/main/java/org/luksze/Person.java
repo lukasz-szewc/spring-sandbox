@@ -1,10 +1,13 @@
 package org.luksze;
 
 public class Person {
-    private final String firstName;
-    private final String secondName;
+    private String firstName;
+    private String secondName;
 
-    public Person(String firstName, String secondName) {
+    public Person() {
+    }
+
+    Person(String firstName, String secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
     }
@@ -15,5 +18,13 @@ public class Person {
 
     public String getSecondName() {
         return secondName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 }
