@@ -1,30 +1,14 @@
 package org.luksze;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Person {
-    private String firstName;
-    private String secondName;
+    public final String firstName;
+    public final String secondName;
 
-    public Person() {
-    }
-
-    Person(String firstName, String secondName) {
+    Person(@JsonProperty("firstName") String firstName,
+           @JsonProperty("secondName") String secondName) {
         this.firstName = firstName;
-        this.secondName = secondName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getSecondName() {
-        return secondName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setSecondName(String secondName) {
         this.secondName = secondName;
     }
 }
