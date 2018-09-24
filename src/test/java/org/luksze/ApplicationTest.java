@@ -22,7 +22,7 @@ public class ApplicationTest {
 
     @Test
     public void testHome() {
-        ResponseEntity<String> entity = this.restTemplate.getForEntity("/", String.class);
+        ResponseEntity<String> entity = this.restTemplate.getForEntity("/person", String.class);
         assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(entity.getBody()).isEqualTo("[{\"firstName\":\"John\",\"secondName\":\"Smith\"},{\"firstName\":\"George\",\"secondName\":\"Newman\"}]");
     }
